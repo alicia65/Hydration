@@ -30,9 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numGlassesOfWater = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.lblResult = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numGlassesOfWater)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -54,19 +55,19 @@
             this.label2.Size = new System.Drawing.Size(0, 18);
             this.label2.TabIndex = 1;
             // 
-            // numericUpDown1
+            // numGlassesOfWater
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(216, 106);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numGlassesOfWater.Location = new System.Drawing.Point(199, 76);
+            this.numGlassesOfWater.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.numGlassesOfWater.Maximum = new decimal(new int[] {
             30,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(150, 24);
-            this.numericUpDown1.TabIndex = 2;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.numGlassesOfWater.Name = "numGlassesOfWater";
+            this.numGlassesOfWater.Size = new System.Drawing.Size(150, 24);
+            this.numGlassesOfWater.TabIndex = 2;
+            this.numGlassesOfWater.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label3
             // 
@@ -76,20 +77,30 @@
             this.label3.TabIndex = 3;
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblResult
+            // 
+            this.lblResult.Location = new System.Drawing.Point(196, 124);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(139, 26);
+            this.lblResult.TabIndex = 4;
+            this.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 294);
+            this.ClientSize = new System.Drawing.Size(569, 179);
+            this.Controls.Add(this.lblResult);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numGlassesOfWater);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
             this.Text = "Hydration";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numGlassesOfWater)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,8 +110,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numGlassesOfWater;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblResult;
     }
 }
 
